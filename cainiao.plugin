@@ -1,8 +1,8 @@
 #!name = 菜鸟
 #!desc = 过滤菜鸟广告。
-#!author = RuCu6[https://github.com/RuCu6]
-#!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/cainiao.png
-#!date = 2024-09-27 11:50
+#!author = RuCu6[修改自]
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Cainiao.png
+#!date = 2024-10-22 10:13
 
 [Rule]
 # 移除广告下发请求
