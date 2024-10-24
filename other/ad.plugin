@@ -1,4 +1,4 @@
-#!name=奶思广告拦截&净化合集
+#!name=奶思广告拦截
 #!desc=自用的10款程序
 #!author=奶思[https://github.com/fmz200]
 #!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/Other_icon/120px/RemoveAds.png
@@ -29,7 +29,6 @@
 # 3️⃣：Loon如果在插件里面写了规则，在规则配置里也写了，哪个优先生效？
 # ✅：插件里的规则优先生效。
 #############################################
-
 
 # > 阿里巴巴
 # hostname = acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
