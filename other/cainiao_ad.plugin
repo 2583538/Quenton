@@ -49,7 +49,6 @@
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad reject-dict
 
 [Script]
-
 # 我的页面
 http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.mine\.main\.cn script-path = https://raw.githubusercontent.com/2583538/Quenton/refs/heads/main/js/cainiao.js, requires-body = true, tag = 移除我的页面推广
 
