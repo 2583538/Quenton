@@ -1,9 +1,8 @@
-#!name = 菜鸟
-#!desc = 过滤菜鸟广告。
+#!name = 菜鸟裹裹Rucu
+#!desc = 菜鸟裹裹Rucu
 #!author = 引用自Rucu
 #!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/cainiao.png
 #!date = 2024-09-27 11:50
-
 
 [Rewrite]
 # 底部发现页 - 角标
