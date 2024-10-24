@@ -1,8 +1,32 @@
-#!name = 菜鸟裹裹Rucu
-#!desc = 菜鸟裹裹Rucu
-#!author = 引用自Rucu
+#!name = Ruku
+#!desc = Ruku
+#!author = RuCu
 #!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/cainiao.png
 #!date = 2024-09-27 11:50
+
+[Rule]
+# 移除广告下发请求
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Cainiao4iPhone*)), REJECT
+
+DOMAIN, acs4baichuan.m.taobao.com, REJECT
+DOMAIN, adsmind.ugdtimg.com, REJECT
+DOMAIN, amdc.m.youku.com, REJECT
+DOMAIN, api.sm.cn, REJECT
+DOMAIN, apiv4-iyes.youku.com, REJECT
+DOMAIN, baichuan-sdk.alicdn.com, REJECT
+DOMAIN, cad.youku.com, REJECT
+DOMAIN, huichuan-mc.sm.cn, REJECT
+DOMAIN, huichuan.sm.cn, REJECT
+DOMAIN, iyes.youku.com, REJECT
+DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+DOMAIN, mc.atm.youku.com, REJECT
+DOMAIN, nbsdk-baichuan.alicdn.com, REJECT
+DOMAIN, pre-acs.youku.com, REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+DOMAIN, yk-ssp.ad.youku.com, REJECT
+DOMAIN, ykad-data.youku.com, REJECT
+DOMAIN, youku-acs.m.taobao.com, REJECT
 
 [Rewrite]
 # 底部发现页 - 角标
@@ -26,7 +50,7 @@
 
 [Script]
 # 我的页面
-http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.mine\.main\.cn script-path = https://raw.githubusercontent.com/2583538/Quenton/refs/heads/main/js/cainiao.js, requires-body = true, tag = 移除我的页面推广
+http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.mine\.main\.cn script-path = hhttps://raw.githubusercontent.com/2583538/Quenton/refs/heads/main/js/cainiao.js, requires-body = true, tag = 移除我的页面推广
 
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://raw.githubusercontent.com/2583538/Quenton/refs/heads/main/js/cainiao.js, requires-body = true, tag = 移除首页推广
