@@ -1,12 +1,11 @@
-#!name = 过滤10款开屏广告
-#!desc = 过滤开屏广告
+#!name = 自用过滤开屏广告
+#!desc = 自用过滤开屏广告
 #!author = RuCu6, fmz200, 奶思
 #!icon = https://raw.githubusercontent.com/RuCu6/Loon/main/Icons/app/loon.png
-#!date = 2024-09-27 11:50
+#!date = 2024-10-24 18:13
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2024-10-21 19:10:00
 #!support=10月24日修改
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
@@ -115,9 +114,7 @@
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources reject-dict
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) reject-dict
 
-# =====================================
-# 脚本
-# =====================================
+#脚本
 [Script]
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
@@ -138,13 +135,6 @@ http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLay
 # > 京喜
 http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js, requires-body=true, timeout=60, tag=京喜
 
-# >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
-# > 民生银行
-# hostname = www.cmbc.com.cn, rs.creditcard.cmbc.com.cn
-^https?:\/\/www\.cmbc\.com\.cn\/m\/image\/loadingpage\/ reject-200
-^https?:\/\/www\.cmbc\.com\.cn\/m\/image\/banner\/.*.png reject-200
-# > 全民生活
-^https?://rs.creditcard.cmbc.com.cn/mmc/img/126f35586ece469aa2daf2e451ba7b4d.jpg reject-200
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 # > 淘宝
