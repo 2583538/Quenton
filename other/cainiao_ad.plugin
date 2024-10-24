@@ -4,12 +4,10 @@
 #!icon=https://gitlab.com/lodepuly/iconlibrary/-/raw/main/App_icon/120px/Cainiao.png
 #!homepage=https://github.com/fmz200/wool_scripts
 #!raw-url= https://raw.githubusercontent.com/2583538/Quenton/refs/heads/main/other/ad.plugin #!tg-group=https://t.me/lanjieguanggao
-#!tag=修改自, fmz200, 奶思, Rucu6
 #!system=iOS, iPadOS
 #!system_version = 
 #!loon_version = 
-#!date=2024-10-21 19:10:00
-#!support=10月24日修改
+#!date=2024-10-24 18:15
 #!remark=下方的所有规则都标注了对应的hostname，可能存在错误或者遗漏，欢迎反馈。对于无法/可选MITM的hostname都特别做了“如开启可自行添加主机名”提示，如果提示后面没有标注主机名则包含所有主机名，否则只包含提示语后面的主机名。
 #############################################
 # "reject"        策略返回 HTTP 状态码 404,不附带任何额外内容
