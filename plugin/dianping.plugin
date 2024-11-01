@@ -49,4 +49,4 @@ http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path=https://raw.
 # MITM：中间人攻击，解密/跳过相关域名的内容，"-"开头为跳过
 # =====================================
 [MITM]
-hostname = acs.m.taobao.com, amdc.m.taobao.com, cainiaoapi.alipan.com, img.meituan.net, portal-portm.meituan.com, mall.meituan.com, intellicc.bcs.cmbchina.com, mbasecc.bas.cmbchina.com, mbasecc.bcs.cmbchina.com, intellicc.bas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, dsp-x.jd.com, bdsp-x.jd.com, router-app-api.jdcloud.com, ccsp-egmas.sf-express.com, mcs-mimp-web.sf-express.com, ucmp.sf-express.com, api-sams.walmartmobile.cn,
+hostname = img.meituan.net, portal-portm.meituan.com, mall.meituan.com, 
