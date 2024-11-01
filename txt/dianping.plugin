@@ -1,6 +1,0 @@
-# > 大众点评
-# hostname = img.meituan.net
-# 开屏广告
-^https?:\/\/img\.meituan\.net\/dpmobile\/ url script-response-body https://github.com/2583538/Quenton/blob/main/js/dianping.js
-#^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png url reject-dict
-#^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) url reject-200
