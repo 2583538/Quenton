@@ -1,0 +1,11 @@
+# 表示包含xxx.com域名后缀下的所有网站链接
+DOMAIN-SUFFIX,xxx.com
+
+# 表示包含这个xxxx域名关键词的所有网站链接
+DOMAIN-KEYWORD,xxxx
+
+# PayPal
+DOMAIN-SUFFIX,paypal.com
+DOMAIN-SUFFIX,paypal.me
+DOMAIN-SUFFIX,paypalobjects.com
+DOMAIN-KEYWORD,paypal
