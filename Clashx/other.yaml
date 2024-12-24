@@ -318,7 +318,7 @@ proxy-providers:
   # 可多机场，下面以两机场为例：
 
   机场1:
-  type: http
+  type: file
   url: https://subapi.rss-node.com/sub?target=clash&interval=129600&filename=Hitun&url=https%3A%2F%2Frss-node.com%2Flink%2FmxJXLAphB4rCGCbs%3Fmu%3D1
   interval: 3600
   path: ./providers/other.yaml
