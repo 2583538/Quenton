@@ -1,10 +1,6 @@
 # &insert 前为先前通过`api.dler.io`转换后的订阅地址
 # https%3A%2F%2Fraw.githubusercontent.com%2F2583538%2FQuenton%2Frefs%2Fheads%2Fmain%2FClashx%2FClashx.ini
 
-https://pub-api-1.bianyuan.xyz/sub?target=clash&url=https%3A%2F%2Fcate.com&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2F2583538%2FQuenton%2Frefs%2Fheads%2Fmain%2FClashx%2FClashx.ini&emoji=true&list=false&udp=false&tfo=false&scv=false&fdn=false&sort=false
-
-
-
 # 该配置文件地址还没有嵌入策略组地址信息
 # 这里以我截图乱填的一个个订阅地址为例
 https://subapi.rss-node.com/sub?target=clash&interval=129600&filename=Hitun&url=https%3A%2F%2Frss-node.com%2Flink%2FmxJXLAphB4rCGCbs%3Fmu%3D1
