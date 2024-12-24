@@ -32,7 +32,7 @@ external-controller: '0.0.0.0:9090'
 # external-ui: folder
 
 # RESTful API 的口令 (可选)
-secret: "hitun"
+secret: ""
 
 # DNS 设置
 
@@ -41,54 +41,51 @@ dns:
   ipv6: false
   listen: 127.0.0.1:8853
   enhanced-mode: fake-ip
- - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-    - 119.29.29.29
-    - 223.5.5.5
-  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - https://223.5.5.5/dns-query
+    - https://223.6.6.6/dns-query
+    - https://doh.pub/dns-query
   fake-ip-filter:
     - "*.lan"
-    - "*.localdomain"
-    - "*.example"
-    - "*.invalid"
-    - "*.localhost"
-    - "*.test"
-    - "*.local"
-    - "*.home.arpa"
-    - time.*.com
-    - time.*.gov
-    - time.*.edu.cn
-    - time.*.apple.com
-    - time1.*.com
-    - time2.*.com
-    - time3.*.com
-    - time4.*.com
-    - time5.*.com
-    - time6.*.com
-    - time7.*.com
-    - ntp.*.com
-    - ntp1.*.com
-    - ntp2.*.com
-    - ntp3.*.com
-    - ntp4.*.com
-    - ntp5.*.com
-    - ntp6.*.com
-    - ntp7.*.com
-    - "*.time.edu.cn"
-    - "*.ntp.org.cn"
-    - +.pool.ntp.org
-    - time1.cloud.tencent.com
-    - stun.*.*
     - stun.*.*.*
-    - +.stun.*.*
-    - +.stun.*.*.*
-    - +.stun.*.*.*.*
-    - swscan.apple.com
-    - swquery.apple.com
-    - swdownload.apple.com
-    - swcdn.apple.com
-    - swdist.apple.com
-    - mesu.apple.com
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.ntp.org.cn"
+    - "*.openwrt.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - time.ustc.edu.cn
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - ntp.aliyun.com
+    - ntp1.aliyun.com
+    - ntp2.aliyun.com
+    - ntp3.aliyun.com
+    - ntp4.aliyun.com
+    - ntp5.aliyun.com
+    - ntp6.aliyun.com
+    - ntp7.aliyun.com
+    - time1.aliyun.com
+    - time2.aliyun.com
+    - time3.aliyun.com
+    - time4.aliyun.com
+    - time5.aliyun.com
+    - time6.aliyun.com
+    - time7.aliyun.com
+    - "*.time.edu.cn"
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
     - music.163.com
     - "*.music.163.com"
     - "*.126.net"
@@ -108,57 +105,26 @@ dns:
     - dl.stream.qqmusic.qq.com
     - aqqmusic.tc.qq.com
     - amobile.music.tc.qq.com
-    - localhost.ptlogin2.qq.com
-    - msftconnecttest.com
-    - "*.msftconnecttest.com"
-    - msftncsi.com
-    - "*.msftncsi.com"
     - "*.xiami.com"
     - "*.music.migu.cn"
     - music.migu.cn
-    - +.wotgame.cn
-    - +.wggames.cn
-    - +.wowsgame.cn
-    - +.wargaming.net
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - localhost.ptlogin2.qq.com
     - "*.*.*.srv.nintendo.net"
     - "*.*.stun.playstation.net"
     - xbox.*.*.microsoft.com
-    - "*.*.xboxlive.com"
     - "*.ipv6.microsoft.com"
-    - teredo.*.*.*
-    - teredo.*.*
+    - "*.*.xboxlive.com"
     - speedtest.cros.wr.pvp.net
-    - +.jjvip8.com
-    - www.douyu.com
-    - activityapi.huya.com
-    - activityapi.huya.com.w.cdngslb.com
-    - www.bilibili.com
-    - api.bilibili.com
-    - a.w.bilicdn1.com
-    - "*.ffxiv.com"
-    - localhost.sec.qq.com
-    - +.srv.nintendo.net
-    - +.stun.playstation.net
-    - xbox.*.microsoft.com
-    - xnotify.xboxlive.com
-    - +.battlenet.com.cn
-    - proxy.golang.org
-    - heartbeat.belkin.com
-    - "*.linksys.com"
-    - "*.linksyssmartwifi.com"
-    - "*.router.asus.com"
-    - lens.l.google.com
-    - stun.l.google.com
-    - +.nflxvideo.net
-    - "*.square-enix.com"
-    - "*.finalfantasyxiv.com"
+
 
 # 代理组策略
 proxy-groups:
   - name: Proxy
     type: select
     use:
-      - 海豚湾
+      - hitun
     proxies:
       - HK
       - TW
@@ -181,11 +147,6 @@ proxy-groups:
   - name: Apple
     type: select
     proxies:
-      - Proxy
-      - HK
-      - TW
-      - SG
-      - JP
       - US
       - DIRECT 
 
@@ -193,22 +154,12 @@ proxy-groups:
     type: select
     proxies:
       - Proxy
-      - HK
-      - TW
-      - SG
-      - JP
       - US
-      - DIRECT 
 
   - name: China
     type: select
     proxies:
       - Proxy
-      - HK
-      - TW
-      - SG
-      - JP
-      - US
       - DIRECT 
 
   - name: GitHub
@@ -216,11 +167,7 @@ proxy-groups:
     proxies:
       - Proxy
       - HK
-      - TW
-      - SG
-      - JP
       - US
-      - DIRECT 
 
   - name: Google
     type: select
@@ -228,10 +175,7 @@ proxy-groups:
       - Proxy
       - HK
       - TW
-      - SG
-      - JP
       - US
-      - DIRECT 
 
   - name: Microsoft
     type: select
@@ -239,8 +183,6 @@ proxy-groups:
       - Proxy
       - HK
       - TW
-      - SG
-      - JP
       - US
       - DIRECT 
 
@@ -249,11 +191,7 @@ proxy-groups:
     proxies:
       - Proxy
       - HK
-      - TW
-      - SG
-      - JP
       - US
-      - DIRECT 
 
   - name: Steam
     type: select
@@ -261,10 +199,7 @@ proxy-groups:
       - Proxy
       - HK
       - TW
-      - SG
-      - JP
       - US
-      - DIRECT 
 
   - name: Telegram
     type: select
@@ -272,134 +207,119 @@ proxy-groups:
       - Proxy
       - HK
       - TW
-      - SG
-      - JP
       - US
-      - DIRECT 
 
   - name: Twitter
     type: select
     proxies:
       - Proxy
-      - HK
       - TW
-      - SG
-      - JP
       - US
-      - DIRECT 
 
   - name: YouTube
     type: select
     proxies:
       - Proxy
       - HK
-      - TW
-      - SG
       - JP
       - US
-      - DIRECT 
 
   - name: PayPal
     type: select
     proxies:
       - Proxy
       - HK
-      - TW
-      - SG
-      - JP
       - US
-      - DIRECT 
 
   - name: HK
     type: select
     use:
-      - 海豚湾HK
+      - hitunHK
     proxies:
       - DIRECT
 
   - name: TW
     type: select
     use:
-      - 海豚湾TW
+      - hitunTW
     proxies:
       - DIRECT
 
   - name: SG
     type: select
     use:
-      - 海豚湾SG
+      - hitunSG
     proxies:
       - DIRECT
 
   - name: JP
     type: select
     use:
-      - 海豚湾JP
+      - hitunJP
     proxies:
       - DIRECT
 
   - name: US
     type: select
     use:
-      - 海豚湾US
+      - hitunUS
     proxies:
       - DIRECT
 
 
 
 proxy-providers:
-  # 可多机场，下面以两机场为例：
 
-  海豚湾:
+  hitun:
   type: http
   url: https://subapi.rss-node.com/sub?target=clash&interval=129600&httpname=Hitun&url=https%3A%2F%2Frss-node.com%2Flink%2FmxJXLAphB4rCGCbs%3Fmu%3D1
   interval: 3600
-  path: ./providers/海豚湾.yaml
+  path: ./providers/hitun.yaml
   health-check:
   enable: true
   interval: 600
   lazy: true
   url: http://www.gstatic.com/generate_204
 
-  海豚湾HK:
+  hitunHK:
     type: file
-    path: ./providers/海豚湾.yaml
+    path: ./providers/hitun.yaml
     filter: '🇭🇰|HK|香港|港|Hongkong'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-  海豚湾TW:
+  hitunTW:
     type: file
-    path: ./providers/海豚湾.yaml
+    path: ./providers/hitun.yaml
     filter: '台|台湾|TW'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-  海豚湾SG:
+  hitunSG:
     type: file
-    path: ./providers/海豚湾.yaml
+    path: ./providers/hitun.yaml
     filter: '🇸🇬|狮城|新|新加坡|SG'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-  海豚湾JP:
+  hitunJP:
     type: file
-    path: ./providers/海豚湾.yaml
+    path: ./providers/hitun.yaml
     filter: '🇯🇵|日|日本|东京|大阪|泉日|埼玉|沪日|深日|JP'
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-  海豚湾US:
+  hitunUS:
     type: file
-    path: ./providers/海豚湾.yaml
+    path: ./providers/hitun.yaml
     filter: '🇺🇸|美|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|us'
     health-check:
       enable: true
