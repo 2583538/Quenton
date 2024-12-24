@@ -281,7 +281,6 @@ proxy-groups:
     type: select
     use:
       - 机场1HK
-      - 机场2HK
     proxies:
       - DIRECT
 
@@ -289,7 +288,6 @@ proxy-groups:
     type: select
     use:
       - 机场1TW
-      - 机场2TW
     proxies:
       - DIRECT
 
@@ -297,7 +295,6 @@ proxy-groups:
     type: select
     use:
       - 机场1SG
-      - 机场2SG
     proxies:
       - DIRECT
 
@@ -305,7 +302,6 @@ proxy-groups:
     type: select
     use:
       - 机场1JP
-      - 机场2JP
     proxies:
       - DIRECT
 
@@ -313,7 +309,6 @@ proxy-groups:
     type: select
     use:
       - 机场1US
-      - 机场2US
     proxies:
       - DIRECT
 
@@ -322,56 +317,20 @@ proxy-groups:
 proxy-providers:
   # 可多机场，下面以两机场为例：
 
-  # 机场1:
-  #   type: http
-  #   url: 机场1 Clash订阅链接
-  #   interval: 3600
-  #   path: ./机场1.yaml
-  #   health-check:
-  #     enable: true
-  #     interval: 600
-  #     # lazy: true
-  #     url: http://www.gstatic.com/generate_204
-
   机场1:
-    type: file
-    path: ./机场1.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
-  # 机场2:
-  #   type: http
-  #   url: 机场2 Clash订阅链接
-  #   interval: 3600
-  #   path: ./机场2.yaml
-  #   health-check:
-  #     enable: true
-  #     interval: 600
-  #     # lazy: true
-  #     url: http://www.gstatic.com/generate_204
-
-  机场2:
-    type: file
-    path: ./机场2.yaml
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
+  type: http
+  url: https://subapi.rss-node.com/sub?target=clash&interval=129600&filename=Hitun&url=https%3A%2F%2Frss-node.com%2Flink%2FmxJXLAphB4rCGCbs%3Fmu%3D1
+  interval: 3600
+  path: ./providers/other.yaml
+  health-check:
+  enable: true
+  interval: 600
+  lazy: true
+  url: http://www.gstatic.com/generate_204
 
   机场1HK:
     type: file
-    path: ./机场1.yaml
-    filter: '🇭🇰|HK|香港|港|Hongkong'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
-  机场2HK:
-    type: file
-    path: ./机场2.yaml
+    path: ./https://raw.githubusercontent.com/2583538/Quenton/refs/heads/main/Clashx/other.yaml
     filter: '🇭🇰|HK|香港|港|Hongkong'
     health-check:
       enable: true
@@ -387,27 +346,9 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-  机场2TW:
-    type: file
-    path: ./机场2.yaml
-    filter: '台|台湾|TW'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
   机场1SG:
     type: file
     path: ./机场1.yaml
-    filter: '🇸🇬|狮城|新|新加坡|SG'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
-  机场2SG:
-    type: file
-    path: ./机场2.yaml
     filter: '🇸🇬|狮城|新|新加坡|SG'
     health-check:
       enable: true
@@ -423,27 +364,9 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-  机场2JP:
-    type: file
-    path: ./机场2.yaml
-    filter: '🇯🇵|日|日本|东京|大阪|泉日|埼玉|沪日|深日|JP'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-
   机场1US:
     type: file
     path: ./机场1.yaml
-    filter: '🇺🇸|美|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|us'
-    health-check:
-      enable: true
-      url: http://www.gstatic.com/generate_204
-      interval: 300
-      
-  机场2US:
-    type: file
-    path: ./机场2.yaml
     filter: '🇺🇸|美|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|us'
     health-check:
       enable: true
