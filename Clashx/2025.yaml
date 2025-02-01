@@ -1,0 +1,78 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+clash-for-android:
+  append-system-dns: false
+secret: hitun
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  use-hosts: true
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+    - 223.6.6.6
+  nameserver:
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - 119.29.29.29
+    - 223.5.5.5
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+
+# 使用订阅链接来动态获取节点
+subscription:
+  - url: "https://subapi1.rss-node.com/sub?target=clash&interval=129600&filename=Hitun&url=https%3A%2F%2Frss-node.com%2Flink%2FmxJXLAphB4rCGCbs%3Fmu%3D1"
+    # 你可以在这里添加更多的订阅链接
+
+proxy-groups:
+  - name: 国内软件分组
+    type: select
+    filter: "super"
+    # 如果你的节点名称包含 "super"，它们将被包括在这个组中
+
+  - name: 国内视频分组
+    type: select
+    filter: "direct"
+    # 如果你的节点名称包含 "direct"，它们将被包括在这个组中
+
+  - name: Google分组
+    type: select
+    filter: "super 香港"
+    # 这里同时匹配 "super" 和 "香港" 的节点
+
+  - name: 国外视频分组
+    type: select
+    filter: "super 香港|super 美国"
+    # 这里匹配包含 "super 香港" 或 "super 美国" 的节点
+
+  - name: 社交媒体分组
+    type: select
+    filter: "super 香港|super 美国"
+    # 这里匹配包含 "super 香港" 或 "super 美国" 的节点
+
+# 规则部分，你需要根据你的需求来配置
+rules:
+  # 示例规则，你需要根据你的实际使用情况来添加或修改这些规则
+  - DOMAIN-SUFFIX,google.com,Google分组
+  - DOMAIN-SUFFIX,youtube.com,国外视频分组
+  - DOMAIN-SUFFIX,facebook.com,社交媒体分组
+  - DOMAIN-SUFFIX,twitter.com,社交媒体分组
+  - DOMAIN-SUFFIX,bilibili.com,国内视频分组
+  - DOMAIN-SUFFIX,baidu.com,国内软件分组
+  - MATCH,DIRECT
