@@ -32,10 +32,17 @@ DOMAIN-KEYWORD,segment,测速美国
 
 #jcrew
 DOMAIN-KEYWORD,jcrew,测速美国
-DOMAIN-SUFFIX,app.jcrew.com:443
+DOMAIN-SUFFIX,app.jcrew.com:443,美国普通
+DOMAIN-SUFFIX,app-analytics-services.com,美国普通
 
 #pay?
 DOMAIN-SUFFIX,writer.cardinalcommerce.com,测速美国
 
 #deepl
 DOMAIN-KEYWORD,deepl.com,手动美国
+
+#doubao
+DOMAIN-KEYWORD,doubao，Direct
+
+#other
+DOMAIN-KEYWORD,myqcloud，Direct
