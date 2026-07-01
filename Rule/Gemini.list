@@ -1,0 +1,31 @@
+# >>> Combined Gemini & Google AI Studio Ruleset <<<
+# Description: Merged ruleset for iOS Gemini APP, Web, and Developer AI Studio.
+
+# 1. Gemini & Bard Core Domains (App & Web)
+DOMAIN-SUFFIX,gemini.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,bard.google.com
+
+# 2. Generative AI & Developer Platforms (Google AI Studio / Makersuite)
+DOMAIN,ai.google.dev
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,makersuite.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-KEYWORD,generativelanguage
+DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,developerprofiles
+
+# 3. Google DeepMind Ecosystem
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+
+# 4. Backend APIs & Frameworks
+DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,apis.google.com
+DOMAIN-KEYWORD,googleapis
+
+# 5. Essential App Support (Accounts & Resources - Missing in image)
+DOMAIN,accounts.google.com
+DOMAIN-SUFFIX,accounts.google.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,googleusercontent.com
