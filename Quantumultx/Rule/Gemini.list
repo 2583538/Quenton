@@ -1,0 +1,31 @@
+# >>> QX专用 Gemini & Google AI 规则 <<<
+# 注意：请将末尾的 "你的Gemini策略组" 替换为你 QX 里的实际策略组名称（比如 proxy 或 美国节点）
+
+# 1. Gemini & Bard 核心业务
+HOST-SUFFIX,gemini.google,你的Gemini策略组
+HOST,gemini.google.com,你的Gemini策略组
+HOST-SUFFIX,bard.google.com,你的Gemini策略组
+
+# 2. 开发者 AI Studio & Colab 平台
+HOST,ai.google.dev,你的Gemini策略组
+HOST,alkalimakersuite-pa.clients6.google.com,你的Gemini策略组
+HOST,makersuite.google.com,你的Gemini策略组
+HOST-SUFFIX,generativeai.google,你的Gemini策略组
+HOST-KEYWORD,generativelanguage,你的Gemini策略组
+HOST-KEYWORD,colab,你的Gemini策略组
+HOST-KEYWORD,developerprofiles,你的Gemini策略组
+
+# 3. DeepMind 生态
+HOST-SUFFIX,deepmind.com,你的Gemini策略组
+HOST-SUFFIX,deepmind.google,你的Gemini策略组
+
+# 4. 后端核心 API
+HOST-SUFFIX,proactivebackend-pa.googleapis.com,你的Gemini策略组
+HOST-SUFFIX,apis.google.com,你的Gemini策略组
+HOST-KEYWORD,googleapis,你的Gemini策略组
+
+# 5. QX 补漏：App 登录与静态资源（防止由于上一条黑客全家桶干扰导致APP卡死）
+HOST,accounts.google.com,你的Gemini策略组
+HOST-SUFFIX,accounts.google.com,你的Gemini策略组
+HOST-SUFFIX,gstatic.com,你的Gemini策略组
+HOST-SUFFIX,googleusercontent.com,你的Gemini策略组
