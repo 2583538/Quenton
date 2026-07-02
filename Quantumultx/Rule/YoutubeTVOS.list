@@ -1,23 +1,60 @@
-# ======= YouTube 官方核心域名 =======
-HOST-SUFFIX, youtube.com, YouTube
-HOST-SUFFIX, youtube-nocookie.com, YouTube
-HOST-SUFFIX, youtubeeducation.com, YouTube
-HOST-SUFFIX, youtu.be, YouTube
+# ======= 核心与 API 域名 =======
+HOST,music.youtube.com,YouTube
+HOST,youtubei.googleapis.com,YouTube
+HOST,yt3.ggpht.com,YouTube
 
-# ======= YouTube 移动端与电视客户端 API =======
-HOST, youtubei.googleapis.com, YouTube
-HOST, yt3.ggpht.com, YouTube
-HOST, yt4.ggpht.com, YouTube
+# ======= 修复电视端“长方形的差”图标乱码（必须加入） =======
+HOST-SUFFIX,gstatic.com,YouTube
+HOST-SUFFIX,googleusercontent.com,YouTube
 
-# ======= Google 静态资源与字体（修复长方形方框乱码的关键） =======
-HOST-SUFFIX, gstatic.com, YouTube
-HOST-SUFFIX, googleusercontent.com, YouTube
+# ======= 视频、图片与缓存 CDN 域名 =======
+HOST-SUFFIX,ggpht.cn,YouTube
+HOST-SUFFIX,ggpht.com,YouTube
+HOST-SUFFIX,googlevideo.com,YouTube
+HOST-SUFFIX,gvt1.com,YouTube
+HOST-SUFFIX,gvt2.com,YouTube
+HOST-SUFFIX,video.google.com,YouTube
+HOST-SUFFIX,wide-youtube.l.google.com,YouTube
+HOST-SUFFIX,withyoutube.com,YouTube
+HOST-SUFFIX,youtu.be,YouTube
+HOST-SUFFIX,youtube-nocookie.com,YouTube
+HOST-SUFFIX,youtube-ui.l.google.com,YouTube
+HOST-SUFFIX,youtubeeducation.com,YouTube
+HOST-SUFFIX,youtubeembeddedplayer.googleapis.com,YouTube
+HOST-SUFFIX,youtubefanfest.com,YouTube
+HOST-SUFFIX,youtubegaming.com,YouTube
+HOST-SUFFIX,youtubego.co.id,YouTube
+HOST-SUFFIX,youtubego.co.in,YouTube
+HOST-SUFFIX,youtubego.com,YouTube
+HOST-SUFFIX,youtubego.com.br,YouTube
+HOST-SUFFIX,youtubego.id,YouTube
+HOST-SUFFIX,youtubego.in,YouTube
+HOST-SUFFIX,youtubei.googleapis.com,YouTube
+HOST-SUFFIX,youtubekids.com,YouTube
+HOST-SUFFIX,youtubemobilesupport.com,YouTube
+HOST-SUFFIX,yt.be,YouTube
+HOST-SUFFIX,ytimg.com,YouTube
 
-# ======= 视频加载与播放流媒体服务器 (CDN) =======
-HOST-SUFFIX, googlevideo.com, YouTube
-HOST-SUFFIX, ytimg.com, YouTube
-HOST-SUFFIX, nhacmp3cdn.com, YouTube
+# ======= 关键词捕获（替代不支持的通配符） =======
+HOST-KEYWORD,youtube,YouTube
+HOST-KEYWORD,googlevideo,YouTube
 
-# ======= 关键词匹配（查漏补缺，捕捉零散的测速或地区分流服务器） =======
-HOST-KEYWORD, youtube, YouTube
-HOST-KEYWORD, googlevideo, YouTube
+# ======= 各国家/地区本地化后缀（精简版） =======
+# 电视端主要通过 API 嗅探，但保留这些后缀能确保点开分享链接等绝对不漏网
+HOST-SUFFIX,youtube.com,YouTube
+HOST-SUFFIX,youtube.tv,YouTube
+HOST-SUFFIX,youtube.hk,YouTube
+HOST-SUFFIX,youtube.tw,YouTube
+HOST-SUFFIX,youtube.jp,YouTube
+HOST-SUFFIX,youtube.kr,YouTube
+HOST-SUFFIX,youtube.sg,YouTube
+HOST-SUFFIX,youtube.de,YouTube
+HOST-SUFFIX,youtube.fr,YouTube
+HOST-SUFFIX,youtube.uk,YouTube
+HOST-SUFFIX,youtube.co.jp,YouTube
+HOST-SUFFIX,youtube.co.uk,YouTube
+
+# ======= YouTube 专属 IP 段 =======
+IP-CIDR,172.110.32.0/21,YouTube
+IP-CIDR,216.73.80.0/20,YouTube
+IP6-CIDR,2620:120:e000::/40,YouTube
