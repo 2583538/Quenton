@@ -1,48 +1,57 @@
-#2024年11月15日
-#自用分流
-
-#lemon8
-DOMAIN-KEYWORD,lemon8cdn,测速美国
+#自用app分流
+# >>>>>>>>>> 1. LEMON8 (海外版小红书及字节海外核心) <<<<<<<<<< 
 DOMAIN-SUFFIX,lemon8-app.com,测速美国
+DOMAIN-SUFFIX,lemon8app.com,测速美国
+DOMAIN-SUFFIX,lemon8cdn.com,测速美国
 DOMAIN-SUFFIX,byteoversea.com,测速美国
+DOMAIN-KEYWORD,lemon8,测速美国
+# Lemon8 登录与分享依赖的第三方日志/推送
+DOMAIN-SUFFIX,appsflyer.com,测速美国
 DOMAIN-KEYWORD,facebook.com,测速美国
-DOMAIN-SUFFIX,appsflyer.com,测速美国
 DOMAIN-KEYWORD,app-measurement,测速美国
-DOMAIN-SUFFIX,appsflyer.com,测速美国
-DOMAIN-SUFFIX,byteoversea.com,测速美国
 
-#target
+# >>>>>>>>>> 2. TARGET (美国百货) <<<<<<<<<<
 DOMAIN-KEYWORD,target,测速美国
+DOMAIN-SUFFIX,targetimg.com,测速美国
+DOMAIN-SUFFIX,targetpayplus.com,测速美国
 
-#kith
+# >>>>>>>>>> 3. KITH & SHOPIFY 生态 (极严防弹窗风控) <<<<<<<<<<
 DOMAIN-KEYWORD,scene7,测速美国
 DOMAIN-KEYWORD,shopify,测速美国
 DOMAIN-KEYWORD,myshopify.com,测速美国
 DOMAIN-KEYWORD,brandingbrand,测速美国
 DOMAIN-KEYWORD,godaddy,测速美国
 DOMAIN-KEYWORD,fsusercontent,测速美国
-DOMAIN-KEYWORD,app-analytics-services,测速美国
 DOMAIN-KEYWORD,leanplum,测速美国
 
-#ralphlauren
+# >>>>>>>>>> 4. RALPH LAUREN (拉夫劳伦) <<<<<<<<<<
 DOMAIN-KEYWORD,ralphlauren,测速美国
+DOMAIN-SUFFIX,ralphlauren.com,测速美国
+DOMAIN-SUFFIX,ralphlauren.asia,测速美国
+DOMAIN-SUFFIX,ralphlauren.eu,测速美国
 
-#Stockx
-DOMAIN-KEYWORD,segment,测速美国
-
-#jcrew
+# >>>>>>>>>> 5. J.CREW (美式服饰) <<<<<<<<<<
 DOMAIN-KEYWORD,jcrew,测速美国
-DOMAIN-SUFFIX,app.jcrew.com:443,测速美国
-DOMAIN-SUFFIX,app-analytics-services.com,测速美国
-#pay?
-DOMAIN-SUFFIX,writer.cardinalcommerce.com,测速美国
+DOMAIN-SUFFIX,jcrew.com,测速美国
+DOMAIN-SUFFIX,jcrewfactory.com,测速美国
 
-#deepl
+# >>>>>>>>>> 6. DEEPL (精准翻译) <<<<<<<<<<
 DOMAIN-KEYWORD,deepl.com,测速美国
+DOMAIN-SUFFIX,deepl.com,测速美国
 
-#other
+# >>>>>>>>>> 🛠️ 核心：付费结账、3D安全验证与防风控（海淘成功的关键） <<<<<<<<<<
+# 包含你抓出的关键 Cardinal 3D 认证，以及主流海淘不可或缺的 Stripe 和人机验证
+DOMAIN-SUFFIX,writer.cardinalcommerce.com,测速美国
+DOMAIN-SUFFIX,stripe.com,测速美国
+DOMAIN-SUFFIX,hcaptcha.com,测速美国
+DOMAIN-SUFFIX,recaptcha.net,测速美国
+DOMAIN-SUFFIX,google.com/recaptcha,测速美国
+DOMAIN-SUFFIX,akamaihd.net,测速美国
+DOMAIN-SUFFIX,edgekey.net,测速美国
+
+# >>>>>>>>>> 📈 公共数据分析、大数据统计与腾讯云跨境 API <<<<<<<<<<
 DOMAIN-KEYWORD,myqcloud,测速美国
 DOMAIN-KEYWORD,mixpanel,测速美国
+DOMAIN-KEYWORD,app-analytics-services,测速美国
 DOMAIN-SUFFIX,app-analytics-services.com,测速美国
 DOMAIN-SUFFIX,marketingcloudapis.com,测速美国
-
