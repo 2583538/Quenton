@@ -1,17 +1,53 @@
-# ============== ChatGPT / OpenAI ==============
-HOST-SUFFIX,openai.com,Proxy
-HOST-SUFFIX,chatgpt.com,Proxy
-HOST-SUFFIX,oaistatic.com,Proxy
-HOST-SUFFIX,oaiusercontent.com,Proxy
-HOST-SUFFIX,ai.com,Proxy
-HOST-SUFFIX,chatgpt.livekit.cloud,Proxy
-HOST,openai-api.arkoselabs.com,Proxy
-HOST-KEYWORD,openai,Proxy
+# ================= OpenAI / ChatGPT / Codex =================
+HOST-SUFFIX,openai.com
+HOST-SUFFIX,chatgpt.com
+HOST-SUFFIX,oaistatic.com
+HOST-SUFFIX,oaiusercontent.com
+HOST-SUFFIX,oaistatsig.com
 
-# ============== Codex / GitHub Copilot ==============
-HOST-SUFFIX,githubcopilot.com,Proxy
-HOST,copilot-proxy.githubusercontent.com,Proxy
-HOST,api.individual.githubcopilot.com,Proxy
-HOST,api.business.githubcopilot.com,Proxy
-HOST,api.enterprise.githubcopilot.com,Proxy
-HOST-SUFFIX,copilot.microsoft.com,Proxy
+# ChatGPT Voice / Realtime
+HOST-SUFFIX,chatgpt.livekit.cloud
+
+# 登录与身份验证
+HOST,cdn.openaimerge.com
+HOST,cdn.workos.com
+HOST,forwarder.workos.com
+HOST,images.workoscdn.com
+HOST,setup.workos.com
+HOST,workos.imgix.net
+HOST,challenges.cloudflare.com
+
+# 旧版验证码端点，可选
+HOST,openai-api.arkoselabs.com
+
+# 客服、邮件、支付及统计，可选
+HOST-SUFFIX,ct.sendgrid.net
+HOST-SUFFIX,intercom.io
+HOST-SUFFIX,intercomcdn.com
+HOST,js.stripe.com
+HOST,o207216.ingest.sentry.io
+HOST,o33249.ingest.sentry.io
+HOST,rum.browser-intake-datadoghq.com
+
+# iOS/macOS 客户端相关，可选
+HOST,humb.apple.com
+
+
+# ================= GitHub Copilot =================
+HOST-SUFFIX,githubcopilot.com
+
+# 建议与模型接口
+HOST,copilot-proxy.githubusercontent.com
+HOST,origin-tracker.githubusercontent.com
+
+# 登录与账户；已有 GitHub 分流时可以省略
+HOST,github.com
+HOST,api.github.com
+HOST,collector.github.com
+
+# 实验与遥测
+HOST,default.exp-tas.com
+HOST,copilot-telemetry.githubusercontent.com
+
+# 企业用量报告，可选
+HOST,copilot-reports.github.com
