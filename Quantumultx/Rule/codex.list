@@ -1,0 +1,17 @@
+# ============== ChatGPT / OpenAI ==============
+HOST-SUFFIX,openai.com,Proxy
+HOST-SUFFIX,chatgpt.com,Proxy
+HOST-SUFFIX,oaistatic.com,Proxy
+HOST-SUFFIX,oaiusercontent.com,Proxy
+HOST-SUFFIX,ai.com,Proxy
+HOST-SUFFIX,chatgpt.livekit.cloud,Proxy
+HOST,openai-api.arkoselabs.com,Proxy
+HOST-KEYWORD,openai,Proxy
+
+# ============== Codex / GitHub Copilot ==============
+HOST-SUFFIX,githubcopilot.com,Proxy
+HOST,copilot-proxy.githubusercontent.com,Proxy
+HOST,api.individual.githubcopilot.com,Proxy
+HOST,api.business.githubcopilot.com,Proxy
+HOST,api.enterprise.githubcopilot.com,Proxy
+HOST-SUFFIX,copilot.microsoft.com,Proxy
