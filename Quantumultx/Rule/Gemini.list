@@ -1,31 +1,47 @@
-# >>> QX专用 Gemini & Google AI 规则 <<<
-# 注意：请将末尾的 "你的Gemini策略组" 替换为你 QX 里的实际策略组名称（比如 proxy 或 美国节点）
+# >>> Google & Gemini Ruleset for Quantumult X <<<
+# FORMAT: Quantumult X filter list (policy-free)
+# SOURCE UPDATED: 2026-07-01
+# CONVERTED: 2026-07-15
+# 使用提示：在 [filter_remote] 中通过 force-policy 指向支持 Gemini 的非香港代理策略。
 
-# 1. Gemini & Bard 核心业务
-HOST-SUFFIX,gemini.google,你的Gemini策略组
-HOST,gemini.google.com,你的Gemini策略组
-HOST-SUFFIX,bard.google.com,你的Gemini策略组
+# ==================== 1. GEMINI & AI CORE SERVICES ====================
+HOST-SUFFIX,gemini.google
+HOST-SUFFIX,gemini.google.com
+HOST-SUFFIX,bard.google.com
+HOST,ai.google.dev
+HOST,alkalimakersuite-pa.clients6.google.com
+HOST,makersuite.google.com
+HOST-SUFFIX,generativeai.google
+HOST-KEYWORD,generativelanguage
+HOST-KEYWORD,colab
+HOST-KEYWORD,developerprofiles
+HOST-SUFFIX,deepmind.com
+HOST-SUFFIX,deepmind.google
+HOST-SUFFIX,proactivebackend-pa.googleapis.com
 
-# 2. 开发者 AI Studio & Colab 平台
-HOST,ai.google.dev,你的Gemini策略组
-HOST,alkalimakersuite-pa.clients6.google.com,你的Gemini策略组
-HOST,makersuite.google.com,你的Gemini策略组
-HOST-SUFFIX,generativeai.google,你的Gemini策略组
-HOST-KEYWORD,generativelanguage,你的Gemini策略组
-HOST-KEYWORD,colab,你的Gemini策略组
-HOST-KEYWORD,developerprofiles,你的Gemini策略组
+# ==================== 2. GOOGLE KEYWORDS & USER AGENTS ====================
+HOST-KEYWORD,google
+HOST-KEYWORD,googleapis
+HOST-KEYWORD,recaptcha
+HOST-KEYWORD,appspot
+HOST-KEYWORD,blogspot
+HOST-KEYWORD,gmail
+USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
+USER-AGENT,*com.google.Drive*
+USER-AGENT,Google.Drive*
 
-# 3. DeepMind 生态
-HOST-SUFFIX,deepmind.com,你的Gemini策略组
-HOST-SUFFIX,deepmind.google,你的Gemini策略组
+# ==================== 3. GOOGLE CORE INFRASTRUCTURE ====================
+HOST,voice.telephony.goog
+HOST,accounts.google.com
+HOST-SUFFIX,accounts.google.com
+HOST-SUFFIX,gstatic.com
+HOST-SUFFIX,googleusercontent.com
+HOST-SUFFIX,googledrive.com
+HOST-SUFFIX,apis.google.com
+HOST-SUFFIX,googleapis-cn.com
+HOST-SUFFIX,googleapis.cn
+HOST-SUFFIX,googleapis.com
+HOST-SUFFIX,gstatic-cn.com
+HOST-SUFFIX,gstatic.cn
+HOST-SUFFIX,gstaticcnapps.cn
 
-# 4. 后端核心 API
-HOST-SUFFIX,proactivebackend-pa.googleapis.com,你的Gemini策略组
-HOST-SUFFIX,apis.google.com,你的Gemini策略组
-HOST-KEYWORD,googleapis,你的Gemini策略组
-
-# 5. QX 补漏：App 登录与静态资源（防止由于上一条黑客全家桶干扰导致APP卡死）
-HOST,accounts.google.com,你的Gemini策略组
-HOST-SUFFIX,accounts.google.com,你的Gemini策略组
-HOST-SUFFIX,gstatic.com,你的Gemini策略组
-HOST-SUFFIX,googleusercontent.com,你的Gemini策略组
