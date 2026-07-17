@@ -1,0 +1,47 @@
+# >>> Combined Google & Gemini All-in-One Ruleset <<<
+# AUTHOR: Compiled for optimized dual-routing
+# UPDATED: 2026-07-01
+# DESCRIPTION: 包含了完整的 Google 全家桶服务与 Gemini App/Web/Developer 核心分流规则。
+# 提示：请将此规则集整体指向一个“支持 Gemini 服务”的非香港代理节点策略组。
+
+payload:
+  # ==================== 1. GEMINI & AI CORE SERVICES ====================
+  - DOMAIN-SUFFIX,gemini.google
+  - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,bard.google.com
+  - DOMAIN,ai.google.dev
+  - DOMAIN,alkalimakersuite-pa.clients6.google.com
+  - DOMAIN,makersuite.google.com
+  - DOMAIN-SUFFIX,generativeai.google
+  - DOMAIN-KEYWORD,generativelanguage
+  - DOMAIN-KEYWORD,colab
+  - DOMAIN-KEYWORD,developerprofiles
+  - DOMAIN-SUFFIX,deepmind.com
+  - DOMAIN-SUFFIX,deepmind.google
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+
+  # ==================== 2. GOOGLE KEYWORDS & USER AGENTS ====================
+  - DOMAIN-KEYWORD,google
+  - DOMAIN-KEYWORD,googleapis
+  - DOMAIN-KEYWORD,recaptcha
+  - DOMAIN-KEYWORD,appspot
+  - DOMAIN-KEYWORD,blogspot
+  - DOMAIN-KEYWORD,gmail
+  - 'USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*'
+  - 'USER-AGENT,*com.google.Drive*'
+  - 'USER-AGENT,Google.Drive*'
+
+  # ==================== 3. GOOGLE CORE INFRASTRUCTURE ====================
+  - DOMAIN,voice.telephony.goog
+  - DOMAIN,accounts.google.com
+  - DOMAIN-SUFFIX,accounts.google.com
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,googledrive.com
+  - DOMAIN-SUFFIX,apis.google.com
+  - DOMAIN-SUFFIX,googleapis-cn.com
+  - DOMAIN-SUFFIX,googleapis.cn
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,gstatic-cn.com
+  - DOMAIN-SUFFIX,gstatic.cn
+  - DOMAIN-SUFFIX,gstaticcnapps.cn
