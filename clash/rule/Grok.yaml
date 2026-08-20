@@ -1,10 +1,11 @@
-# Grok / xAI 分流规则 (Classical 格式)
-# 适用于 Clash Meta / Mihomo / Stash 等
+# NAME: Grok-X
+# DESC: Grok / xAI + X (Twitter) 合并分流规则
+# FORMAT: Clash Meta / Mihomo classical
 # behavior: classical
-# 更新时间：2026-08
+# UPDATED: 2026-08-20
 
 payload:
-  # ========== 主站与聊天入口 ==========
+  # ========== Grok / xAI 主站与聊天入口 ==========
   - DOMAIN,grok.com
   - DOMAIN,www.grok.com
   - DOMAIN,x.ai
@@ -56,15 +57,52 @@ payload:
   - DOMAIN-SUFFIX,metrics.x.ai
   - DOMAIN-SUFFIX,telemetry.x.ai
 
-  # ========== 其他 ==========
+  # ========== 其他 Grok ==========
   - DOMAIN,grokipedia.com
+  - DOMAIN-SUFFIX,grokipedia.com
 
-  # ========== 兜底（覆盖所有剩余子域） ==========
+  # ========== Grok / xAI 兜底 ==========
   - DOMAIN-SUFFIX,x.ai
   - DOMAIN-SUFFIX,grok.com
 
-  # ========== 可选：X 平台相关（Grok 登录与媒体依赖，按需开启） ==========
-  # - DOMAIN-SUFFIX,x.com
-  # - DOMAIN-SUFFIX,twitter.com
-  # - DOMAIN-SUFFIX,twimg.com
-  # - DOMAIN-SUFFIX,t.co
+  # ========== X (Twitter) 主站与短链 ==========
+  - DOMAIN-SUFFIX,x.com
+  - DOMAIN-SUFFIX,twitter.com
+  - DOMAIN-SUFFIX,twitter.biz
+  - DOMAIN-SUFFIX,twitter.jp
+  - DOMAIN-SUFFIX,twitterinc.com
+  - DOMAIN-SUFFIX,twitteroauth.com
+  - DOMAIN-SUFFIX,twittercommunity.com
+  - DOMAIN-SUFFIX,twitterflightschool.com
+  - DOMAIN-SUFFIX,twitterstat.us
+  - DOMAIN-SUFFIX,t.co
+  - DOMAIN-SUFFIX,tweetdeck.com
+  - DOMAIN-SUFFIX,twitpic.com
+  - DOMAIN-SUFFIX,vine.co
+
+  # ========== X 媒体 / CDN ==========
+  - DOMAIN-SUFFIX,twimg.com
+  - DOMAIN-SUFFIX,twimg.co
+  - DOMAIN-SUFFIX,twimg.org
+  - DOMAIN-SUFFIX,twvid.com
+  - DOMAIN-SUFFIX,cms-twdigitalassets.com
+
+  # ========== X 直播 / 广告 / 基础设施 ==========
+  - DOMAIN-SUFFIX,periscope.tv
+  - DOMAIN-SUFFIX,pscp.tv
+  - DOMAIN-SUFFIX,ads-twitter.com
+  - DOMAIN-SUFFIX,tellapart.com
+  - DOMAIN-SUFFIX,twtrdns.net
+  - DOMAIN-SUFFIX,twttr.com
+  - DOMAIN-SUFFIX,twttr.net
+
+  # ========== X 关键字兜底 ==========
+  - DOMAIN-KEYWORD,twitter
+
+  # ========== X IP 段 ==========
+  - IP-CIDR,69.195.160.0/19
+  - IP-CIDR,192.133.76.0/22
+  - IP-CIDR,199.59.148.0/22
+  - IP-CIDR,199.96.56.0/21
+  - IP-CIDR,202.160.128.0/22
+  - IP-CIDR,209.237.192.0/19
