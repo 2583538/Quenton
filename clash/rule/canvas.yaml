@@ -1,0 +1,7 @@
+# Canvas / Instructure 分流规则
+# 覆盖大多数学校/机构的 Canvas 实例
+
+- DOMAIN-SUFFIX,instructure.com,PROXY
+- DOMAIN-SUFFIX,canvas-user-content.com,PROXY
+- DOMAIN-SUFFIX,canvas.com,PROXY          # 部分实例会用到
+- DOMAIN-KEYWORD,canvas,PROXY             # 兜底，匹配带 canvas 的域名（可选）
