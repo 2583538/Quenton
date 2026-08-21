@@ -1,0 +1,16 @@
+# Figma 分流规则
+# 建议放在规则列表较前的位置，优先匹配
+
+- DOMAIN-SUFFIX,figma.com,PROXY
+- DOMAIN-SUFFIX,figmausercontent.com,PROXY
+- DOMAIN-SUFFIX,figma.site,PROXY
+- DOMAIN-SUFFIX,figma.app,PROXY
+- DOMAIN-SUFFIX,figmaweave.com,PROXY
+- DOMAIN-SUFFIX,makeproxy-c.figma.site,PROXY
+- DOMAIN-SUFFIX,makeproxy-m.figma.site,PROXY
+- DOMAIN-SUFFIX,awswaf.com,PROXY          # 安全验证相关
+- DOMAIN-SUFFIX,arkoselabs.com,PROXY      # 人机验证
+- DOMAIN-SUFFIX,weavy.ai,PROXY
+- DOMAIN-SUFFIX,prodregistryv2.org,PROXY
+- DOMAIN-SUFFIX,esm.sh,PROXY              # 部分依赖
+- DOMAIN-SUFFIX,jsdelivr.net,PROXY        # 部分 CDN（可选，影响面稍大）
