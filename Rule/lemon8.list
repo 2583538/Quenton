@@ -1,30 +1,27 @@
 # ==================== Lemon8 完整规则（Loon） ====================
-# 建议策略组：Lemon8（只放美国/日本/新加坡优质节点）
+# 策略组建议：Lemon8（优先美国优质节点，其次日本/新加坡）
+# 更新：2026-09-21
 
-# 核心域名
+# ---------- 核心域名 ----------
 DOMAIN-SUFFIX,lemon8-app.com
 DOMAIN-SUFFIX,lemon8-app.us
 DOMAIN-SUFFIX,lemon8cdn.com
 DOMAIN-SUFFIX,lemon8.com
 
-# TikTok 共用 CDN（非常关键，必须全部代理）
-DOMAIN-SUFFIX,tiktokcdn.com
-DOMAIN-SUFFIX,tiktokcdn-us.com
-DOMAIN-SUFFIX,tiktokv.com
-DOMAIN-SUFFIX,tiktokv.us
-DOMAIN-SUFFIX,ttwstatic.com
+# ---------- 字节海外通用 ----------
 DOMAIN-SUFFIX,byteoversea.com
 DOMAIN-SUFFIX,ibytedtos.com
 DOMAIN-SUFFIX,ipstatp.com
 DOMAIN-SUFFIX,muscdn.com
+DOMAIN-SUFFIX,ttwstatic.com
 
-# 关键词兜底（抓住所有带 lemon8 的子域名）
+# ---------- TikTok 共用 CDN（图片/视频加载关键） ----------
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokcdn-us.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokv.us
+
+# ---------- 关键词兜底（建议保留） ----------
 DOMAIN-KEYWORD,lemon8
 DOMAIN-KEYWORD,tiktokcdn
 DOMAIN-KEYWORD,tiktokv
-
-# 常见具体子域名（从你截图补充）
-DOMAIN,p16-lemon8-sign-useast5.tiktokcdn-us.com
-DOMAIN,p19-lemon8-sign-useast5.tiktokcdn-us.com
-DOMAIN,p16-lemon8-va-sign.tiktokcdn-us.com
-DOMAIN,lf16-effectcdn-us.tiktokcdn-us.com
