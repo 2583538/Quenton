@@ -1,0 +1,37 @@
+# Lemon8 Rules for Loon
+# 更新时间：2026-09-21
+# 用途：Lemon8（字节跳动旗下，与 TikTok 同源）分流
+# 格式：Loon / Surge 兼容 DOMAIN 规则集
+# 使用方式：在 Loon 中添加远程规则，policy 自行指定（建议 PROXY 或独立策略组）
+
+# ==================== 核心域名 ====================
+DOMAIN-SUFFIX,lemon8-app.com
+DOMAIN-SUFFIX,lemon8cdn.com
+DOMAIN-SUFFIX,lemon8-app.us
+DOMAIN-SUFFIX,lemon8.com
+
+# ==================== 常见子域名 / 接口 ====================
+DOMAIN-SUFFIX,api.lemon8-app.com
+DOMAIN-SUFFIX,api16-normal.lemon8-app.com
+DOMAIN-SUFFIX,mcs.lemon8-app.com
+DOMAIN-SUFFIX,mcs-va.lemon8-app.com
+DOMAIN-SUFFIX,mcs-ttp.lemon8-app.us
+DOMAIN-SUFFIX,mon.lemon8-app.com
+DOMAIN-SUFFIX,mon-va.lemon8-app.com
+DOMAIN-SUFFIX,mon-ttp.lemon8-app.us
+DOMAIN-SUFFIX,log.lemon8-app.com
+DOMAIN-SUFFIX,log16-normal-useast1a.lemon8-app.com
+DOMAIN-SUFFIX,log19-normal-useast1a.lemon8-app.com
+DOMAIN-SUFFIX,log22-normal-useast1a.lemon8-app.com
+
+# ==================== CDN / 静态资源（常与 TikTok 共用） ====================
+DOMAIN-KEYWORD,lemon8
+DOMAIN-SUFFIX,ttwstatic.com
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokcdn-us.com
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokv.us
+
+# ==================== 其他相关 ====================
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,ibytedtos.com
