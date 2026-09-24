@@ -1,14 +1,20 @@
 # NAME: Meta Muse
-# AUTHOR: Community (based on public domains as of 2026-09)
+# AUTHOR: Community
 # UPDATED: 2026-09-24
-# DOMAIN-SUFFIX: Muse related
-# TOTAL: ~15
+# 基于实际请求日志补充
 
-# 核心域名
+# 核心 Muse 域名
 DOMAIN-SUFFIX,muse.ai
 DOMAIN-SUFFIX,meta.ai
 DOMAIN-SUFFIX,ai.meta.com
 DOMAIN-SUFFIX,ai.developer.meta.com
+
+# Graph / API 相关（你日志里出现的）
+DOMAIN,graph.meta.ai
+DOMAIN,meta.graph.meta.com
+DOMAIN-SUFFIX,graph.meta.com
+DOMAIN-SUFFIX,graph.facebook.com
+DOMAIN-SUFFIX,facebook.com
 
 # Model API / 开发者
 DOMAIN,api.meta.ai
@@ -16,11 +22,9 @@ DOMAIN,ai.developer.meta.com
 DOMAIN,developer.meta.com
 DOMAIN,llama.developer.meta.com
 
-# 其他相关
+# 其他常见 Meta 相关
 DOMAIN-SUFFIX,atmeta.com
 DOMAIN-SUFFIX,llamameta.net
 DOMAIN-SUFFIX,llama.com
-
-# 可选补充（如果需要更完整的 Meta AI 覆盖，可取消注释）
-# DOMAIN-SUFFIX,fbcdn.net
-# DOMAIN-KEYWORD,meta
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-KEYWORD,meta
