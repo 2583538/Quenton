@@ -1,0 +1,21 @@
+rules:
+  # ===== Claude / Anthropic 专用分流 =====
+  - DOMAIN-SUFFIX,anthropic.com,Proxy
+  - DOMAIN-SUFFIX,claude.ai,Proxy
+  - DOMAIN-SUFFIX,claude.com,Proxy
+  - DOMAIN-SUFFIX,clau.de,Proxy
+  - DOMAIN-SUFFIX,claudeusercontent.com,Proxy
+  - DOMAIN-SUFFIX,claudemcpclient.com,Proxy
+  - DOMAIN-SUFFIX,claudemcpcontent.com,Proxy
+
+  # 常用第三方依赖（可选，保证登录/资源完整）
+  - DOMAIN,anthropic.auth0.com,Proxy
+  - DOMAIN,cdn.usefathom.com,Proxy
+  - DOMAIN,servd-anthropic-website.b-cdn.net,Proxy
+  - DOMAIN,anthropic.com.cdn.cloudflare.net,Proxy
+  - DOMAIN-SUFFIX,sentry.io,Proxy          # 可选
+  - DOMAIN-SUFFIX,statsigapi.net,Proxy      # 功能开关/遥测
+
+  # Anthropic 官方 IP 段（可选兜底）
+  - IP-CIDR,160.79.104.0/21,Proxy,no-resolve
+  - IP-CIDR6,2607:6bc0::/32,Proxy,no-resolve
