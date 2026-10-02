@@ -1,5 +1,4 @@
-rules:
-  # ===== Claude / Anthropic 专用分流 =====
+# ===== Claude / Anthropic 专用分流 =====
   - DOMAIN-SUFFIX,anthropic.com,Proxy
   - DOMAIN-SUFFIX,claude.ai,Proxy
   - DOMAIN-SUFFIX,claude.com,Proxy
